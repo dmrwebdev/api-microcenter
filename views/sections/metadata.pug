@@ -5,6 +5,6 @@
     | Please Upload a File ...
   .view
     h4#output
-    form#metadata-form(enctype='multipart/form-data' method='GET' action='metadata')
+    form#metadata-form( method='POST' action='metadata' enctype='multipart/form-data')
       input#inputfield(type='file' name='upfile')
       input#button(type='submit' value='Upload')

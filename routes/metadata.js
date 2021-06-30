@@ -5,7 +5,8 @@ const path = require('path')
 const multer = require('multer')
 const upload = multer({ dest: __dirname + '/../uploads/' });
 
-metadataRouter.get('/', upload.single('upfile'), (req, res) => {
+metadataRouter.post('/', upload.single('upfile'), (req, res) => {
+  console.log(req.file)
   res.json({
     name: req.file.originalname,
     type: req.file.mimetype,
